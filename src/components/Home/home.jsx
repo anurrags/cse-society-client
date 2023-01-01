@@ -1,5 +1,4 @@
 import "./home.css";
-import Navbar from "../Navbar/navbar";
 import Carousel from "../Carousel/carousel";
 import TeamLead from "../TeamLead/teamLead";
 import ContactForm from "../ContactForm/contactForm";
@@ -11,7 +10,6 @@ import Email from "@mui/icons-material/Email";
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <div className="main_container-home">
         <Carousel />
         <div className="container-home">

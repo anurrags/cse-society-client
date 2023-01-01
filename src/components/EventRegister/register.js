@@ -1,9 +1,8 @@
 import "./register.css";
-import Navbar from "../Navbar/navbar";
+
 const register = () => {
   return (
     <div>
-      <Navbar />
       <div className="event-register-div">
         <h1 className="register-heading">Register</h1>
         <div className="form">
@@ -12,7 +11,7 @@ const register = () => {
             method="POST"
           >
             <div className="event-name input-box">
-              <label for="event">
+              <label htmlFor="event">
                 <span className="details">Event Name*</span>
               </label>
               <br />
@@ -66,11 +65,11 @@ const register = () => {
                 <input type="radio" name="gender" id="dot-2" />
                 <span className="gender-title">Gender*</span>
                 <div className="category">
-                  <label for="dot-1">
+                  <label htmlFor="dot-1">
                     <span className="dot one"></span>
                     <span className="gender">Male</span>
                   </label>
-                  <label for="dot-2">
+                  <label htmlFor="dot-2">
                     <span className="dot two"></span>
                     <span className="gender">Female</span>
                   </label>

@@ -1,12 +1,11 @@
 import "./team.css";
-import Navbar from "../Navbar/navbar";
+
 import FourthYear from "./FourthYear";
 import ThirdYear from "./ThirdYear";
 import SecondYear from "./SecondYear";
 const Team = () => {
   return (
     <div className="all-members">
-      <Navbar />
       <h1 className="team-title">
         <span>Our</span> Team
       </h1>

@@ -3,6 +3,7 @@
   background: -webkit-linear-gradient(to right, #d7dde8, #757f9a);
   background: linear-gradient(to right, #d7dde8, #757f9a);
   padding-bottom: 3rem;
+  min-height: 100vh;
 }
 .blog-component {
   margin: 4rem 4rem;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import Navbar from "../Navbar/navbar";
+
 const Signup = () => {
   const [data, setData] = useState({
     firstName: "",
@@ -37,8 +37,6 @@ const Signup = () => {
 
   return (
     <div>
-      <Navbar />
-
       <div className="login_container">
         <div className="login_form_container">
           <div className="left">

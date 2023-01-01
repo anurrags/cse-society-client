@@ -7,18 +7,23 @@ import Register from "./components/EventRegister/register";
 import Blog from "./components/Blogs/Blog";
 import Team from "./components/Team/Team";
 import Alumni from "./components/Alumni/Alumni";
+import Navbar from "./components/Navbar/navbar";
+
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/events" exact element={<Event />} />
-      <Route path="/blogs" exact element={<Blog />} />
-      <Route path="/signup" exact element={<Signup />} />
-      <Route path="/login" exact element={<Login />} />
-      <Route path="/eventRegistration" exact element={<Register />} />
-      <Route path="/team" exact element={<Team />} />
-      <Route path="/alumni" exact element={<Alumni />} />
-    </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/events" exact element={<Event />} />
+        <Route path="/blogs" exact element={<Blog />} />
+        <Route path="/signup" exact element={<Signup />} />
+        <Route path="/login" exact element={<Login />} />
+        <Route path="/eventRegistration" exact element={<Register />} />
+        <Route path="/team" exact element={<Team />} />
+        <Route path="/alumni" exact element={<Alumni />} />
+      </Routes>
+    </>
   );
 }
 

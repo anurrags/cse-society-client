@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Navbar from "../Navbar/navbar";
+
 import "./login.css";
 
 const Login = () => {
@@ -33,8 +33,6 @@ const Login = () => {
 
   return (
     <div>
-      <Navbar />
-
       <div className="login_container">
         <div className="login_form_container">
           <div className="left">
