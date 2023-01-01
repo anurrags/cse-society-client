@@ -1,8 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-
+import { ProgressBar } from "react-loader-spinner";
 const Signup = () => {
+  const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
@@ -21,10 +22,13 @@ const Signup = () => {
     try {
       const url =
         process.env.REACT_APP_SIGNUP || "http://localhost:8080/api/users";
+      setLoading(true);
       const { data: res } = await axios.post(url, data);
+      setLoading(false);
       navigate("/login");
       console.log(res.message);
     } catch (error) {
+      setLoading(false);
       if (
         error.response &&
         error.response.status >= 400 &&
@@ -79,6 +83,17 @@ const Signup = () => {
                 className="input"
               />
               {error && <div className="error_msg">{error}</div>}
+              {loading && (
+                <ProgressBar
+                  height="80"
+                  width="80"
+                  ariaLabel="progress-bar-loading"
+                  wrapperStyle={{}}
+                  wrapperClass="progress-bar-wrapper"
+                  borderColor="#F4442E"
+                  barColor="#51E5FF"
+                />
+              )}
               <button type="submit" className="signin">
                 Sign Up
               </button>

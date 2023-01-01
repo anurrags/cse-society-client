@@ -1,13 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
 import "./login.css";
+import { ProgressBar } from "react-loader-spinner";
 
 const Login = () => {
   const [data, setData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
-
+  const [loading, setLoading] = useState(false);
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
   };
@@ -17,10 +17,14 @@ const Login = () => {
     try {
       const url =
         process.env.REACT_APP_LOGIN || "http://localhost:8080/api/auth";
+      setLoading(true);
       const { data: res } = await axios.post(url, data);
+      setLoading(false);
       localStorage.setItem("token", res.data);
       window.location = "/";
     } catch (error) {
+      setLoading(false);
+
       if (
         error.response &&
         error.response.status >= 400 &&
@@ -59,6 +63,17 @@ const Login = () => {
                 className="input"
               />
               {error && <div className="error_msg">{error}</div>}
+              {loading && (
+                <ProgressBar
+                  height="80"
+                  width="80"
+                  ariaLabel="progress-bar-loading"
+                  wrapperStyle={{}}
+                  wrapperClass="progress-bar-wrapper"
+                  borderColor="#F4442E"
+                  barColor="#51E5FF"
+                />
+              )}
               <button type="submit" className="signin">
                 Sign In
               </button>
