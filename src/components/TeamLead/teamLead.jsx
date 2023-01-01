@@ -14,6 +14,7 @@ function TeamLead() {
             width={200}
             height={200}
             src="https://i.pinimg.com/originals/ac/c0/b4/acc0b46e0eb4910ab49d6b24b3886a49.jpg"
+            alt="Team Lead"
           />
           <div className="description">
             <h1>John Snow</h1>
@@ -36,6 +37,7 @@ function TeamLead() {
           <img
             width={200}
             height={200}
+            alt="Team Lead"
             src="https://helios-i.mashable.com/imagery/articles/04ZQqCk2uQ9bnfChGJ1su7b/hero-image.fill.size_1248x702.v1623365036.jpg"
           />
           <div className="description">
@@ -59,6 +61,7 @@ function TeamLead() {
           <img
             width={200}
             height={200}
+            alt="Team Lead"
             src="https://static.toiimg.com/photo/62981209.cms"
           />
           <div className="description">

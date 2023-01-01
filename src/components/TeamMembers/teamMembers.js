@@ -9,7 +9,7 @@ const teamMembers = (props) => {
     <div id="team_member">
       <div className="divider"></div>
       <div className="member">
-        <img src={props.image} />
+        <img src={props.image} alt="Team Members" />
         <div className="description">
           <h1>{props.name}</h1>
           <h2>{props.designation}</h2>
