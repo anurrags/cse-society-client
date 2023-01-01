@@ -1,4 +1,4 @@
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/home";
 import Event from "./components/Event/event";
 import Signup from "./components/Signup/signup";
@@ -8,8 +8,6 @@ import Blog from "./components/Blogs/Blog";
 import Team from "./components/Team/Team";
 import Alumni from "./components/Alumni/Alumni";
 function App() {
-  const user = localStorage.getItem("token");
-
   return (
     <Routes>
       <Route path="/" element={<Home />} />

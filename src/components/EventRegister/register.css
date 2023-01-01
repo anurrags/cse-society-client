@@ -1,18 +1,25 @@
+.event-register-div {
+  background: #757f9a;
+  background: -webkit-linear-gradient(to right, #d7dde8, #757f9a);
+  background: linear-gradient(to right, #d7dde8, #757f9a);
+  padding: 3rem;
+  min-height: 100vh;
+}
 .register-heading {
   text-align: center;
-  color: #fff;
+  color: rgb(4, 4, 4);
+  padding-bottom: 2rem;
   font-weight: 900;
   font-family: "Roboto Slab";
-  margin-top: 2rem;
   letter-spacing: 2px;
 }
 /* ***************Event Form**************** */
 .form {
-  margin: 5rem auto;
+  margin: auto;
   max-width: 700px;
   width: 100%;
   background-color: #fff;
-  padding: 25px 30px;
+  padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
@@ -34,12 +41,11 @@ form .input-box span.details {
 }
 .input-box input,
 .input-box select {
-  height: 45px;
   width: 100%;
   outline: none;
   font-size: 16px;
   border-radius: 5px;
-  padding-left: 15px;
+  padding: 0.6rem 1.5rem;
   border: 1px solid #ccc;
   border-bottom-width: 2px;
   transition: all 0.3s ease;
@@ -108,3 +114,15 @@ form .button input:hover {
 }
 
 /* ***************************************** */
+@media (max-width: 550px) {
+  form .user-details {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .input-box {
+    width: 100%;
+  }
+  .input-box .input {
+    width: 100%;
+  }
+}

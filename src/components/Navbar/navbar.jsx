@@ -61,7 +61,7 @@ const Navbar = () => {
 
             {user && (
               <li>
-                <button className="logout_btn" onClick={handleLogout}>
+                <button className="logout_btn hover" onClick={handleLogout}>
                   Logout
                 </button>
               </li>
