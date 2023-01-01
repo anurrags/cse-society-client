@@ -3,7 +3,9 @@ import AlumniMembers from "../AlumniMembers/AlumniMembers";
 import Navbar from "../Navbar/navbar";
 import useFetch from "../../hooks/useFetch";
 const Alumni = () => {
-  const url = "http://localhost:8080/api/team/alumni/2022";
+  const url =
+    process.env.REACT_APP_ALUMNI ||
+    "http://localhost:8080/api/team/alumni/2022";
   const { data, loading } = useFetch(url);
   return (
     <div className="all-members">

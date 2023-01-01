@@ -3,7 +3,7 @@ import Navbar from "../Navbar/navbar";
 import BlogComponent from "../BlogComponent/BlogComponent";
 import useFetch from "../../hooks/useFetch";
 export default function Blog() {
-  const url = "http://localhost:8080/api/blogs";
+  const url = process.env.REACT_APP_BLOG || "http://localhost:8080/api/blogs";
   const { data, loading } = useFetch(url);
   return (
     <div className="blog-div">

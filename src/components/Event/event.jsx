@@ -5,7 +5,7 @@ import useFetch from "../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
-  const url = "http://localhost:8080/api/event";
+  const url = process.env.REACT_APP_EVENT || "http://localhost:8080/api/event";
   const { data, loading } = useFetch(url);
   const User = localStorage.getItem("token");
   // console.log(data);
